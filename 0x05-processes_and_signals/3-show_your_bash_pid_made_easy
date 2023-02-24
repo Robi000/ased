@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# used to show the pid with specific name 
+
+pgrep -l bash 

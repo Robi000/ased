@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# this will create the infinity loop
+
+trap "echo I am invincible!!!" SIGTERM
+
+count=10
+while [ $count -le 10 ]; do
+echo "To infinity and beyond"
+sleep 2
+
+done
