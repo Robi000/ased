@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# show active ip4 connections using ifconfig.
+# shellcheck disable=SC1083
+ifconfig | grep 'inet ' | awk {'print $2'}

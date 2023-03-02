@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# opneing a listning connection at port 98 of local host 
+nc -l 98
+
