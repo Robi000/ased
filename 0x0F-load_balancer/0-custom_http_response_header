@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#clone my firend github and execute all of them then handling the name
+git clone https://github.com/noahchernet/alx-system_engineering-devops/
+cd alx-system_engineering-devops/0x0C-web_server || exit
+./1-install_nginx_web_server
+./3-redirection
+./4-not_found_page_404
+
+url=$(echo "\tserver_name _;\n\tadd_header X-Served-By $HOSTNAME;")
+
+sudo sed -i "s/\tserver_name _;/$url/" /etc/nginx/sites-available/default
+sudo sed -i "s/\tserver_name _;/$url/" /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
